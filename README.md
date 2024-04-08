@@ -61,7 +61,9 @@ Technology Analysis:
     Backend: Laravel (PHP framework) is used for server-side logic and handling database interactions.
     Authentication: Laravel Sanctum is likely used for user authentication, allowing access control to specific functionalities.
     Database: A database (not specified) stores user information, portfolio details, and potentially blog post content.
-    Route::post('/user-registration',[UserController::class,'UserRegistration']);
+    
+
+Route::post('/user-registration',[UserController::class,'UserRegistration']);
 Route::post('/user-login',[UserController::class,'UserLogin']);
 Route::get('/user-profile',[UserController::class,'UserProfile'])->middleware('auth:sanctum');
 Route::get('/logout',[UserController::class,'UserLogout'])->middleware('auth:sanctum');
@@ -128,7 +130,6 @@ Route::post("/create-experience",[ExperienceController::class,'ExperienceCreate'
 Route::get("/experience-list",[ExperienceController::class,'ExperienceList'])->middleware('auth:sanctum');
 Route::post("/experience-delete",[ExperienceController::class,'ExperienceDelete'])->middleware('auth:sanctum');
 Route::post("/experience-update",[ExperienceController::class,'ExperienceUpdate'])->middleware('auth:sanctum');
-
 
 
 
